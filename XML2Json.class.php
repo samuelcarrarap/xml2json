@@ -25,12 +25,12 @@
 
         private function array_filter_recursive($array) {
             foreach ($array as $key => &$value) {
-                if(empty($value)){
+                if(empty($value) && $value !== 0){
                     $array[$key] = null;
                 } else {
                     if (is_array($value)) {
                         $value = $this->array_filter_recursive($value);
-                        if(empty($value)) {
+                        if(empty($value) && $value !== 0) {
                             $array[$key] = null;
                         }
                     }

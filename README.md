@@ -1,5 +1,5 @@
 # xml2json
-PHP class that converts json to XML.
+PHP class that converts XML to JSON.
 
 **BASIC USAGE**
 ````php
